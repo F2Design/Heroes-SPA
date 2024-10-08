@@ -1,6 +1,7 @@
-# React + Vite
+# Heroes SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un ejercicio del curso de React de Fernando Herrera sobre una aplicacion Heroes SPA
+This is an exercise from Fernando Herrera's React course on a Heroes SPA application
 
 Currently, two official plugins are available:
 
