@@ -1,13 +1,23 @@
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 
 
 export const LoginPage = () => {
+
+    const { login } = useContext( AuthContext )
 
     const navigate = useNavigate();
 
     /* Este es el hook */
     const onLogin = () => {
-        navigate('/', {
+
+        /* Cuando la persona se autentica, voy a verificar si existe lastPath que hicimos en PrivateRoute.jsx, si huvo lastPath lo quiero enviar a esa pantalla  */
+        const lastPath = localStorage.getItem('lastPath') || '/';
+
+        login( 'Fredy Frasser' );
+
+        navigate( lastPath, {
             replace: true
         });
     }
